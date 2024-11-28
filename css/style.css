@@ -1,0 +1,286 @@
+/* Teclado de Piano Programado: */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6f6e6e;
+}
+.keyboard-container {
+    padding: 30px 30px 26px;
+    background-color: darkred;
+    border-radius: 10px;
+    position: relative;
+    border: 3px solid rgb(98, 1, 1);
+    border-radius: 0 0 10px 10px;
+}
+/*! Rever Abaixo */
+.container-botoes {
+    display: flex;
+    gap: 16px;
+}
+.botao-com-texto {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.botao-com-texto span {
+    font-size: 16px;
+    padding-left: 30px;
+    color: #888;
+}
+/*! Rever Acima */
+.toggle-button-teclas,
+.toggle-button-notas {
+    position: absolute;
+    right: 10%;
+    width: 24px;
+    height: 24px;
+    background: #888;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: filter 0,2s;
+}
+.toggle-button-teclas {
+    top: 15%;
+}
+.toggle-button-notas {
+    top: 25%;
+}
+.toggle-button-teclas::after,
+.toggle-button-notas::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #000;
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.toggle-button-teclas:hover, .toggle-button-notas:hover {
+    filter: brightness(0.8);
+}
+/** Classe que Esconde com as Letras: */
+.hide-text-teclas, .hide-text-notas {
+    opacity: 0;
+}
+.keys {
+    position: relative;
+    cursor: pointer;
+    border-top: 5px solid #000;
+}
+.white-keys {
+    display: flex;
+    background-color: darkred;
+}
+.white-key {
+    width: 68px;
+    height: 280px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.white-key:hover,
+.white-key.clicked {
+    background: linear-gradient(to right, #b1b0b0, #8e8d8d, #6f6e6e, #8e8d8d, #b1b0b0);
+    transform: scale(1.01);
+}
+.black-key {
+    position:absolute;
+    top: 0;
+    width: 38px;
+    height: 160px;
+    background: #000;
+    border: 2px solid #000;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.black-key:hover,
+.black-key.clicked {
+    background: linear-gradient(to right, #6f6e6e, #6f6e6e, #3f3e3e, #6f6e6e, #6f6e6e );
+    transform: scale(1.01);
+}
+.black-key:nth-child(1){
+    left: 49px;
+}
+.black-key:nth-child(2){
+    left: 117px;
+}
+.black-key:nth-child(3){
+    left: 253px;
+    /* 117px +(2 *68px) */
+}
+.black-key:nth-child(4){
+    left: 321px;
+}
+.black-key:nth-child(5){
+    left: 389px;
+}
+.black-key:nth-child(6){
+    left: 525px;
+}
+.black-key:nth-child(7){
+    left: 593px;
+}
+.black-key:nth-child(8){
+    left: 729px;
+}
+.black-key:nth-child(9){
+    left: 797px;
+}
+.black-key:nth-child(10){
+    left: 865px;
+}
+/* ETIQUETAS nas Teclas: */
+.white-key .tecla {
+    color: #6f6e6e;
+    background-color: transparent;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.white-key .tecla:hover {
+    color: #fff;
+}
+.white-key .nota {
+    color: #000;
+    background-color: transparent;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.black-key .tecla {
+    color: #6f6e6e;
+    background-color: transparent;
+    font-size: 20px;
+    padding-bottom: 8px;
+    margin-top: 5px;
+}
+.black-key .tecla:hover {
+    color: #fff;
+}
+.black-key .nota {
+    color: #fff;
+    background-color: transparent;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.compact-control-panel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 140px;
+    width: 800px;
+    background-color: #333;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 0 0 6px 6px;
+    border: 2px solid #2a2a2a;
+    box-shadow: 0 0 5px 2px;
+}
+/* Caixas de som TRILHO PRETO*/
+.speaker {
+    width: 22px;
+    height: 80px;
+    background-color: black;
+    border-radius: 3px;
+    position: absolute;
+}
+.left-speaker {
+    left: 5%;
+}
+.right-speaker {
+    left: 16%;
+}
+.button-square {
+    width: 40px;
+    height: 40px;
+    background-color: #666;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+    cursor: pointer; 
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 0 4px 1px;
+    position: absolute;
+}
+.button-square.left {
+    left: 4%;
+}
+.button-square.right {
+    left: 15%;
+}
+/* Botões de controle */
+.control-buttons {
+    display: flex;
+    gap: 30px;
+}
+.button-round {
+    width: 60px;
+    height: 60px;
+    background-color: #888;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #2a2a2a;
+    box-shadow: 0 0 5px 2px;
+    position: relative;
+}
+.button-round.left {
+    left: 45%;
+}
+.button-round.right {
+    right: 1%;
+}
+.button-round::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: #333;
+    border-radius: 50%;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 0 1px 1px;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* ====================== */
+/* Tela de Som Vasada: */
+.speaker-vasada {
+    width: 300px;
+    height: 100px;
+    background-color: #3f3e3e;
+    border-radius: 20px;
+    border: 2px solid #2a2a2a;
+    box-shadow: 0 0 5px 2px;
+    position: relative;
+    overflow: hidden;
+}
+.speaker-vasada::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #2a2a2a 1px, transparent 3px);
+    background-size: 10px 10px;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    z-index: 1;
+}
