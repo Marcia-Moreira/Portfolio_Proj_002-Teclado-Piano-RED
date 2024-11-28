@@ -9,15 +9,13 @@ Este repositório faz parte de uma série de projetos que demonstram minhas habi
 ##
 
 ## Link do Projeto Finalizado:
-☑️ Projeto finalizado / Deploy no GitHub Pages: https://marcia-moreira.github.io/Portfolio_Proj_001-Game_Genius_1980/
+☑️ Projeto finalizado / Deploy no GitHub Pages: https://marcia-moreira.github.io/Portfolio_Proj_002-Teclado-Piano-RED/
 
-## Nome do Projeto: GENIUS GAME
-GENIUS Game - by Brinquedos Estrela - Lançamento 1980.
-
-🔵🟢🔴🟡 Criado nos anos 80, o _Genius_ foi um marco da memória e diversão lançado pela _Brinquedos Estrela_, desafiando jogadores com sequências cada vez mais complexas de luzes e sons. 🎶✨
+## Nome do Projeto: TECLADO PIANO - RED
+Teclado / Piano virtual, simulador para ensaio e ou aprendizado.
 
 ## Motivação para produção deste Projeto:
-Jogo retrô, reproduzido para ser usado em encontros famíliares, nas festividades de fim de ano, com propósito de promover a interação em partidas coletivas e entreterimento! 
+Projeto desenvolvido devido a necessidade de treinamento para aprimorar os estudos de teoria musical.
 
 ## Funcionalidades Iniciais:
 - 🎮 Reprodução de sequência de cores: O jogo exibe uma sequência aleatória de cores que o jogador precisa memorizar e repetir na mesma ordem.
@@ -60,25 +58,24 @@ Jogo retrô, reproduzido para ser usado em encontros famíliares, nas festividad
     &nbsp;&nbsp;&nbsp;
 </div>
 
-- **HTML5:** Estruturação do conteúdo e marcação semântica do jogo Genius.
+- **HTML5:** Estruturação do conteúdo e marcação semântica do das teclas e suas notas musicais.
 
 - **CSS3:** Estilização visual com:
   - Animações para os botões interativos.
-  - Transições suaves que simulam a luz dos botões.
+  - Transições suaves que simulam a movimentação dos botões quando pressionados.
   - Responsividade para diferentes dispositivos.
 
-- **JavaScript (ES6):** Lógica do jogo e interação, incluindo:
-  - Manipulação do DOM para destacar os botões durante as jogadas.
-  - Uso de eventos para capturar cliques do jogador.
-  - Implementação da lógica principal do jogo, como sequência de jogadas, verificação de erros e pontuação.
-  - Implementação de lógicas complementares para controle de som e de velocidade.
-  - Efeito de card 3d com frente e verso para exposição de Instruções do Jogo.
+- **JavaScript:** Lógica do simulador e interação, incluindo:
+  - Manipulação do DOM para destacar os botões durante o ensaio.
+  - Uso de eventos para capturar cliques da digitação das teclas.
+  - ~~Implementação da lógica principal do jogo, como sequência de jogadas, verificação de erros e pontuação.~~
+  - Implementação de lógicas complementares para controle de marcações de posição das teclas  x notas.
 
 Ferramentas de apoio:
 - **Git e GitHub:** Controle de versão e hospedagem do código.
 - **GitHub Pages:** Para o deploy da aplicação.
 - **VS Code:** Ambiente de desenvolvimento.
-- **Bootstrap Icons:** Ícones navegáveis e sofisticados.
+~~**Bootstrap Icons:** Ícones navegáveis e sofisticados.~~
 - **Trello:** Para organizar as etapas do projeto.
 
 ## Imagens do Projeto:
@@ -111,7 +108,7 @@ Ferramentas de apoio:
 
 ## Como Rodar o Projeto Localmente:
 1. Clone o repositório:
-   git clone https://github.com/Marcia-Moreira/Portfolio_Proj_001-Game_Genius_1980.git
+   git clone https://github.com/Marcia-Moreira/Portfolio_Proj_002-Teclado-Piano-RED.git
 
 ## Minhas idéias de melhorias, implementadas durante o desenvolvimento:
 - [ OK ] Delay no iniciar próxima sequencia
@@ -137,8 +134,8 @@ Ferramentas de apoio:
 
 ## Registros da Construção 🧱:
 - Desenvolvimento Web => *Marcia Moreira*
-- Iniciado => 18/11/2024
-- Finalizado Primeiro Deploy => 26/11/2024
+- Iniciado => 04/11/2024
+- Finalizado Primeiro Deploy => 08/11/2024
 - Atualização do Projeto => N/A
 - WhatsApp => *+55 11 97721-9430*
 <div style="display: inline_block">
