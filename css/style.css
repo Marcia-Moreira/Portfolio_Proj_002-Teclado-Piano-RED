@@ -10,6 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #6f6e6e;
+    touch-action:none;
 }
 .keyboard-container {
     padding: 30px 30px 26px;
@@ -194,10 +195,11 @@ body {
 /* Caixas de som TRILHO PRETO*/
 .speaker {
     width: 22px;
-    height: 80px;
+    height: 100px;
     background-color: black;
     border-radius: 3px;
     position: absolute;
+    top: 15%;
 }
 .left-speaker {
     left: 5%;
@@ -222,14 +224,15 @@ body {
 }
 .button-square.left {
     left: 4%;
+    top: 45%;
 }
 .button-square.right {
     left: 15%;
+    top: 32%;
 }
 /* Botões de controle */
 .control-buttons {
     display: flex;
-    gap: 30px;
 }
 .button-round {
     width: 60px;
@@ -242,10 +245,10 @@ body {
     position: relative;
 }
 .button-round.left {
-    left: 45%;
+    left: 30%;
 }
 .button-round.right {
-    right: 1%;
+    right: 5%;
 }
 .button-round::after {
     content: "";
