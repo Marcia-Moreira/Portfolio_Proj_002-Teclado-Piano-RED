@@ -1,18 +1,43 @@
 // Teclado de Piano Programado:
-// console.log("Hello, World!")
+// console.log("Testes do Teclado!")
 
 // CODIGO PARA CAPTURAR CLICKS E TOUCHSCREEN:
 const $allkeys = document.querySelectorAll(".key")
 
-$allkeys.forEach(key =>
-    key.addEventListener("click", (event) => {
-        // console.log(event.target)
-        // console.log(event.target.dataset.musicNote)
-        const notePressed = event.target.dataset.musicNote
-        const audio = new Audio(`./piano-keys/${notePressed}.wav`)
-        audio.play()
-    })
-)
+$allkeys.forEach(key => {
+    // Evento para toque em telas sensíveis (touchstart)
+    key.addEventListener("touchstart", (event) => {
+        // Evita comportamento padrão de rolagem ou zoom (ALTERADO)
+        event.preventDefault();
+        const notePressed = event.target.dataset.musicNote;
+        const audio = new Audio(`./piano-keys/${notePressed}.wav`);
+        audio.play();
+
+        // Adiciona a cor na tecla pressionada
+        key.classList.add("clicked");
+    });
+
+    // Evento para término do toque (touchend)
+    key.addEventListener("touchend", (event) => {
+        event.preventDefault(); // Evita comportamento padrão (ALTERADO)
+        key.classList.remove("clicked");
+    });
+
+    // Evento para clique do mouse
+    key.addEventListener("mousedown", (event) => {
+        const notePressed = event.target.dataset.musicNote;
+        const audio = new Audio(`./piano-keys/${notePressed}.wav`);
+        audio.play();
+
+        // Adiciona a cor na tecla pressionada
+        key.classList.add("clicked");
+    });
+
+    // Evento para soltar o botão do mouse
+    key.addEventListener("mouseup", (event) => {
+        key.classList.remove("clicked");
+    });
+});
 // CODIGO PARA CAPTURAR TECLADO FÍSICO:
 const keyboardNotes = {
     "q": "C1",
