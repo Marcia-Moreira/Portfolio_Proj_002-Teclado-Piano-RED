@@ -4,6 +4,16 @@ Este repositório faz parte de uma série de projetos que demonstram minhas habi
 
 # SIMULADOR DE TECLADO VIRTUAL 🎹 / PIANO VIRTUAL 🎹
 
+## Imagens do Projeto:
+<!-- style="display: flex; justify-content: center; text-align: center; gap: 20px;" -->
+<div style="display: inline_block" align="center">
+   <img src="./img-readme/img-simulador-teclado_1.png" alt="Captura de Tela 1" width="300" style="margin-right: 10px; border-radius: 10px;">
+   
+   <img src="./img-readme/img-simulador-teclado_2.png" alt="Captura de Tela 2" width="300" style="margin-right: 10px; border-radius: 10px;">
+   
+   <img src="./img-readme/img-simulador-teclado_3.png" alt="Captura de Tela 3" width="300" style="margin-right: 10px; border-radius: 10px;">
+</div>
+
 ## Link do Projeto Finalizado:
 ☑️ Projeto finalizado / Deploy no GitHub Pages: https://marcia-moreira.github.io/Portfolio_Proj_002-Teclado-Piano-RED/
 
@@ -61,28 +71,6 @@ Ferramentas de apoio:
 - **GitHub Pages:** Para o deploy da aplicação.
 - **VS Code:** Ambiente de desenvolvimento.
 - **Trello:** Para organizar as etapas do projeto.
-
-## Imagens do Projeto:
-<!-- style="display: flex; justify-content: center; text-align: center; gap: 20px;" -->
-<div style="display: inline_block" align="center">
-   <!-- ![Captura de Tela](./img/img_deploy_01.png) -->
-   <img src="./img/img_deploy_01.png" alt="Captura de Tela 1" width="300" style="margin-right: 10px; border-radius: 10px;">
-   
-   <!-- ![Captura de Tela](./img/img_deploy_02.png) -->
-   <img src="./img/img_deploy_02.png" alt="Captura de Tela 2" width="300" style="margin-right: 10px; border-radius: 10px;">
-   
-   <!-- ![Captura de Tela](./img/img_deploy_03.png) -->
-   <img src="./img/img_deploy_03.png" alt="Captura de Tela 3" width="300" style="margin-right: 10px; border-radius: 10px;">
-   
-   <!-- ![Captura de Tela](./img/img_deploy_04.png) -->
-   <img src="./img/img_deploy_04.png" alt="Captura de Tela 4" width="300" style="margin-right: 10px; border-radius: 10px;">
-   
-   <!-- ![Captura de Tela](./img/img_deploy_05.png) -->
-   <img src="./img/img_deploy_05.png" alt="Captura de Tela 5" width="300" style="margin-right: 10px; border-radius: 10px;">
-
-   <!-- ![Captura de Tela](./img/img_deploy_06.png) -->
-   <img src="./img/img_deploy_06.png" alt="Captura de Tela 5" width="300" style="margin-right: 10px; border-radius: 10px;">
-</div>
 
 ## Links e Referências  projeto inicial:
 - Link projeto referência no GitHub: https://github.com/gustavopolonio/piano
