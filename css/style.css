@@ -13,6 +13,22 @@ body {
     /* Evitar toques desnecessários no Touch: por exemplo dois dedos=tela preta*/
     touch-action: none;
 }
+/** Mensagem de aviso: */
+.warning {
+    display: none; /* Oculto */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    z-index: 9999;
+}
 .keyboard-container {
     padding: 30px 30px 26px;
     background-color: darkred;
