@@ -420,6 +420,7 @@ body {
 /* *********************************************************** */
 @media (max-width: 866px) {
     .keyboard-container {
+        top: 0;
         padding: 10px 10px 8px;
     }
     .container-botoes {
@@ -486,6 +487,7 @@ body {
         margin-bottom: 3px;
     }
     .compact-control-panel {
+        top: 0;
         height: 90px;
         width: 540px;
     }
