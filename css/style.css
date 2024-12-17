@@ -445,7 +445,8 @@ body {
     }
     .white-key {
         width: 48px;
-        height: 200px;
+/*         height: 200px; */
+        height: 180px;
     }
     .black-key {
         width: 24px;
@@ -488,7 +489,8 @@ body {
     }
     .compact-control-panel {
         top: 0;
-        height: 90px;
+/*         height: 90px; */
+        height: 75px;
         width: 540px;
     }
     /* Caixas de som TRILHO PRETO*/
