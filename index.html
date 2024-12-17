@@ -1,4 +1,4 @@
-<!-- Teclado de Piano Programado: -->
+ <!-- Teclado de Piano Programado: -->
  <!DOCTYPE html>
  <html lang="pt-br">
  <head>
@@ -9,6 +9,10 @@
  </head>
  <body>
     <section>
+        <!--* Mensagem de aviso: Landscape/Horizontal obrigatória: -->
+        <div id="landscape-warning" class="warning">
+            <p>Por favor, gire seu dispositivo ou aumente a largura da tela para continuar!</p>
+        </div>
         <div class="keyboard-container">
             <div class="container-botoes">
                 <div class="botao-com-texto">
@@ -19,20 +23,20 @@
                 </div>
             </div>
 
-            <!-- Painel de Controle Compacto -->
+            <!--* Painel de Controle Compacto: -->
             <div class="compact-control-panel">
                 <div class="pai-speaker">
-                   <!-- Speaker e botão à esquerda -->
+                   <!--* Speaker e botão à esquerda: -->
                    <div class="speaker left-speaker"></div>
                    <div class="button-square left">Tone</div>
-                   <!-- Speaker e botão à direita -->
+                   <!--* Speaker e botão à direita: -->
                    <div class="speaker right-speaker"></div>
                    <div class="button-square right">Echo</div>
                 </div>
-                <!-- Botão redondo de controle de volume no centro -->
+                <!--* Botão redondo de controle de volume no centro: -->
                 <div class="button-round left" id="volume-control"></div>
                 <div class="button-round right"id="volume-control"></div>
-                <!-- Caixa de Som Vasada: -->
+                <!--* Caixa de Som Vasada: -->
                 <div class="speaker-vasada">
                     <div class="vasado1"></div>
                     <div class="vasado2"></div>
@@ -41,8 +45,9 @@
                     <div class="vasado5"></div>
                 </div>
             </div>
-
+            <!--* Teclado: -->
             <div class="keys">
+                <!--* Teclas Brancas: -->
                 <div class="white-keys">
                     <div class="key white-key" data-music-note="C1"><span class="tecla">Q</span><span class="nota">DÓ</span></div>
                     <div class="key white-key" data-music-note="D1"><span class="tecla">W</span><span class="nota">RÉ</span></div>
@@ -59,7 +64,7 @@
                     <div class="key white-key" data-music-note="A2"><span class="tecla">N</span><span class="nota">LÁ</span></div>
                     <div class="key white-key" data-music-note="B2"><span class="tecla">M</span><span class="nota">SI</span></div>
                 </div>
-
+                <!--* Teclas Pretas: -->
                 <div class="black-keys">
                     <div class="key black-key" data-music-note="C1s"><span class="tecla">2</span><span class="nota">DÓ#</span></div>
                     <div class="key black-key" data-music-note="D1s"><span class="tecla">3</span><span class="nota">RÉ#</span></div>
@@ -78,5 +83,6 @@
     <script src="./js/script.js"></script>
     <script src="./js/script-botoes.js"></script>
     <script src="./js/script-painel.js"></script>
+    <script src="./js/script-landscape.js"></script>
  </body>
  </html>
