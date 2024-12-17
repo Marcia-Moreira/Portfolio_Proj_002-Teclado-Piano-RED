@@ -1,4 +1,4 @@
-/* Teclado de Piano Programado: */
+/** Teclado de Piano Programado: RED */
 * {
     margin: 0;
     padding: 0;
@@ -12,11 +12,6 @@ body {
     background-color: #6f6e6e;
     /* Evitar toques desnecessários no Touch: por exemplo dois dedos=tela preta*/
     touch-action: none;
-
-    /*? TESTE RESPONSIVIDADE CELULAR */
-    margin: 0px;
-    padding: 20px;
-    box-sizing: border-box;
 }
 .keyboard-container {
     padding: 30px 30px 26px;
@@ -25,12 +20,8 @@ body {
     position: relative;
     border: 3px solid rgb(98, 1, 1);
     border-radius: 0 0 10px 10px;
-
-    /*? TESTE RESPONSIVIDADE CELULAR */
-    /* max-width: 90%; */
     box-sizing: border-box;
 }
-/*! Rever Abaixo */
 .container-botoes {
     display: flex;
     gap: 16px;
@@ -45,7 +36,6 @@ body {
     padding-left: 30px;
     color: #888;
 }
-/*! Rever Acima */
 .toggle-button-teclas,
 .toggle-button-notas {
     position: absolute;
@@ -87,12 +77,12 @@ body {
     cursor: pointer;
     border-top: 5px solid #000;
 }
-/* Caixa de Teclas: */
+/** Caixa de Teclas: */
 .white-keys {
     display: flex;
     background-color: darkred;
 }
-/* Teclas Brancas: */
+/** Teclas Brancas: */
 .white-key {
     width: 68px;
     height: 280px;
@@ -109,7 +99,7 @@ body {
     background: linear-gradient(to right, #b1b0b0, #8e8d8d, #6f6e6e, #8e8d8d, #b1b0b0);
     transform: scale(1.01);
 }
-/*! Teclas Pretas */
+/** Teclas Pretas: */
 .black-key {
     position:absolute;
     top: 0;
@@ -159,7 +149,7 @@ body {
 .black-key:nth-child(10){
     left: 865px;
 }
-/* ETIQUETAS nas Teclas: */
+/** ETIQUETAS nas Teclas: */
 .white-key .tecla {
     color: #6f6e6e;
     background-color: transparent;
@@ -173,7 +163,7 @@ body {
     color: #000;
     background-color: transparent;
     font-size: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 .black-key .tecla {
     color: #6f6e6e;
@@ -191,6 +181,7 @@ body {
     font-size: 14px;
     margin-bottom: 5px;
 }
+/** Quadro de Botões: */
 .compact-control-panel {
     position: relative;
     display: flex;
@@ -205,7 +196,7 @@ body {
     border: 2px solid #2a2a2a;
     box-shadow: 0 0 5px 2px;
 }
-/* Caixas de som TRILHO PRETO*/
+/** Botões de som TRILHO PRETO*/
 .speaker {
     width: 22px;
     height: 100px;
@@ -243,9 +234,10 @@ body {
     left: 15%;
     top: 32%;
 }
-/* Botões de controle */
+/** Botões de controle */
 .control-buttons {
     display: flex;
+    /* gap: 30px; */
 }
 .button-round {
     width: 60px;
@@ -276,8 +268,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-/* ====================== */
-/* Tela de Som Vasada: */
+/** Tela de Som Vasada: */
 .speaker-vasada {
     width: 300px;
     height: 100px;
@@ -302,16 +293,11 @@ body {
 }
 
 /* *********************************************************** */
-/* Responsividade */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-        color: yellow;
-    }
+/** EXECUÇÃO EM LANDSCAPE - MODO PAISAGEM: */
+/* *********************************************************** */
+@media (max-width: 1021px) {
     .keyboard-container {
         padding: 20px 20px 16px;
-        margin: 10px;
-        max-width: 100%;
     }
     .container-botoes {
         gap: 10px;
@@ -325,7 +311,6 @@ body {
     }
     .toggle-button-teclas,
     .toggle-button-notas {
-    position: absolute;
     right: 8%;
     width: 22px;
     height: 22px;
@@ -335,17 +320,18 @@ body {
         width: 14px;
         height: 14px;
     }
-    /* Primeiro Bloco: */
+    .keys {
+        border-top: 3px solid #000;
+    }
     .white-key {
         width: 58px;
         height: 240px;
-        background-color: pink;
     }
     .black-key {
         width: 28px;
         height: 120px;
     }
-        
+    /* Primeiro Bloco: */   
     .black-key:nth-child(1){
         left: 46px;
     }
@@ -378,50 +364,23 @@ body {
     .black-key:nth-child(10){
         left: 740px;
     }
-
-/*! REVER */
-    .white-key .tecla {
+    .white-key .tecla, .white-key .nota, .black-key .tecla, .black-key .nota {
         font-size: 12px;
         margin-top: 3px;
     }
-    .white-key .nota {
-        font-size: 08px;
-        margin-bottom: 3px;
-    }
-    .black-key .tecla {
-        font-size: 12px;
-        margin-top: 3px;
-    }
-    .black-key .nota {
-        font-size: 08px;
-        margin-bottom: 3px;
-    }
-/*   urgente  DESCOBRIR ONDE É ISSO??? */
     .compact-control-panel {
-        height: 100px;
+        height: 120px;
         width: 650px;
-        margin-bottom: 10px;
-        padding: 5px 10px;
-        border-radius: 0 0 6px 6px;
-        border: 2px solid #2a2a2a;
-        box-shadow: 0 0 5px 2px;
     }
-/* Caixas de som TRILHO PRETO*/
+    /* Caixas de som TRILHO PRETO*/
     .speaker {
         width: 18px;
         height: 70px;
-        top: 15%;
-    }
-    .left-speaker {
-        left: 5%;
-    }
-    .right-speaker {
-        left: 16%;
     }
     .button-square {
         width: 30px;
         height: 30px;
-        font-size: 10px;
+        font-size: 12px;
     }
     .button-square.left {
         left: 4%;
@@ -435,49 +394,121 @@ body {
         width: 40px;
         height: 40px;
     }
-    .button-round.left {
-        left: 30%;
-    }
-    .button-round.right {
-        right: 5%;
-    }
-    .button-round::after {
-        width: 7px;
-        height: 7px;
-        top: 12%;
-        left: 50%;
-    }
     /* Tela de Som Vasada: */
     .speaker-vasada {
         width: 200px;
         height: 70px;
     }
-
-
-
-
-    
-
-    /* Section de Botões: */
-    /* Fazer a proporção dos botões não consegui fazer girar para horizontal */
-
 }
-/* TESTE: */
-@media (max-width: 480px) {
-    body {
-        padding: 5px;
-    }
+/* *********************************************************** */
+@media (max-width: 866px) {
     .keyboard-container {
-        padding: 10px 10px 6px;
-        max-width: 100%;
+        padding: 10px 10px 8px;
     }
+    .container-botoes {
+        gap: 8px;
+    }
+    .botao-com-texto {
+        gap: 4px;
+    }
+    .botao-com-texto span {
+        font-size: 12px;
+        padding-left: 20px;
+    }
+    .toggle-button-teclas,
+    .toggle-button-notas {
+    width: 20px;
+    height: 20px;
+    }
+    .toggle-button-teclas::after,
+    .toggle-button-notas::after {
+        width: 12px;
+        height: 12px;
+    }
+    .white-key {
+        width: 48px;
+        height: 220px;
+    }
+    .black-key {
+        width: 24px;
+    }
+    /* Primeiro Bloco: */   
+    .black-key:nth-child(1){
+        left: 36px;
+    }
+    .black-key:nth-child(2){
+        left: 86px;
+    }
+    .black-key:nth-child(3){
+        left: 180px;
+    }
+    .black-key:nth-child(4){
+        left: 228px;
+    }
+    .black-key:nth-child(5){
+        left: 276px;
+    }
+    /* Segundo Bloco: */
+    .black-key:nth-child(6){
+        left: 372px;
+    }
+    .black-key:nth-child(7){
+        left: 420px;
+    }
+    .black-key:nth-child(8){
+        left: 516px;
+    }
+    .black-key:nth-child(9){
+        left: 565px;
+    }
+    .black-key:nth-child(10){
+        left: 612px;
+    }
+    .black-key .nota {
+        font-size: 9px;
+        margin-bottom: 3px;
+    }
+    .compact-control-panel {
+        height: 100px;
+        width: 540px;
+    }
+    /* Caixas de som TRILHO PRETO*/
+    .button-square {
+        width: 25px;
+        height: 25px;
+        font-size: 10px;
+    }
+    .button-round {
+        width: 35px;
+        height: 35px;
+    }
+    /* Tela de Som Vasada: */
+    .speaker-vasada {
+        width: 190px;
+        height: 65px;
+    }
+}
+
+/* *********************************************************** */
+/* TESTE: 480px  => TELA MÍNIMA EM PAISAGEM 698px DE Largura:*/
+/* 698px */
+@media (max-width: 698px) {
     .black-key {
         background-color: greenyellow;
     }
 }
 
+
+
+
+/* *********************************************************** */
+
+/*! REVER UMA SOLUÇÃO PARA OPERAR EM LANDSCAPE (TELA HORIZONTAL) */
 /* @media (orientation: landscape) and (max-width: 768px) */
 /*  @media (max-height: 480px) and (orientation: landscape) */
+
+
+/* 
 @media (max-width: 768px) and (max-height: 500px) {
     body {
         padding: 5px;
@@ -491,6 +522,5 @@ body {
     .black-key {
         background-color: coral;
     }
-}
-
+} */
 /* *********************************************************** */
