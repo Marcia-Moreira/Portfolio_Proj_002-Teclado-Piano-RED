@@ -380,12 +380,83 @@ body {
     }
 
 /*! REVER */
-    .tecla {
+    .white-key .tecla {
         font-size: 12px;
+        margin-top: 3px;
     }
-    .nota {
+    .white-key .nota {
+        font-size: 08px;
+        margin-bottom: 3px;
+    }
+    .black-key .tecla {
         font-size: 12px;
+        margin-top: 3px;
     }
+    .black-key .nota {
+        font-size: 08px;
+        margin-bottom: 3px;
+    }
+/*   urgente  DESCOBRIR ONDE É ISSO??? */
+    .compact-control-panel {
+        height: 100px;
+        width: 650px;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        border-radius: 0 0 6px 6px;
+        border: 2px solid #2a2a2a;
+        box-shadow: 0 0 5px 2px;
+    }
+/* Caixas de som TRILHO PRETO*/
+    .speaker {
+        width: 18px;
+        height: 70px;
+        top: 15%;
+    }
+    .left-speaker {
+        left: 5%;
+    }
+    .right-speaker {
+        left: 16%;
+    }
+    .button-square {
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+    .button-square.left {
+        left: 4%;
+        top: 45%;
+    }
+    .button-square.right {
+        left: 15%;
+        top: 32%;
+    }
+    .button-round {
+        width: 40px;
+        height: 40px;
+    }
+    .button-round.left {
+        left: 30%;
+    }
+    .button-round.right {
+        right: 5%;
+    }
+    .button-round::after {
+        width: 7px;
+        height: 7px;
+        top: 12%;
+        left: 50%;
+    }
+    /* Tela de Som Vasada: */
+    .speaker-vasada {
+        width: 200px;
+        height: 70px;
+    }
+
+
+
+
+    
 
     /* Section de Botões: */
     /* Fazer a proporção dos botões não consegui fazer girar para horizontal */
