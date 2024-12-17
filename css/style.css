@@ -5,12 +5,18 @@
     box-sizing: border-box;
 }
 body {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
     background-color: #6f6e6e;
-    touch-action:none;
+    /* Evitar toques desnecessários no Touch: por exemplo dois dedos=tela preta*/
+    touch-action: none;
+
+    /*? TESTE RESPONSIVIDADE CELULAR */
+    margin: 0px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .keyboard-container {
     padding: 30px 30px 26px;
@@ -19,6 +25,10 @@ body {
     position: relative;
     border: 3px solid rgb(98, 1, 1);
     border-radius: 0 0 10px 10px;
+
+    /*? TESTE RESPONSIVIDADE CELULAR */
+    /* max-width: 90%; */
+    box-sizing: border-box;
 }
 /*! Rever Abaixo */
 .container-botoes {
@@ -45,7 +55,7 @@ body {
     background: #888;
     border-radius: 50%;
     cursor: pointer;
-    transition: filter 0,2s;
+    transition: filter 0.2s;
 }
 .toggle-button-teclas {
     top: 15%;
@@ -68,7 +78,7 @@ body {
 .toggle-button-teclas:hover, .toggle-button-notas:hover {
     filter: brightness(0.8);
 }
-/** Classe que Esconde com as Letras: */
+/** Classe que Esconde as Letras: */
 .hide-text-teclas, .hide-text-notas {
     opacity: 0;
 }
@@ -77,10 +87,12 @@ body {
     cursor: pointer;
     border-top: 5px solid #000;
 }
+/* Caixa de Teclas: */
 .white-keys {
     display: flex;
     background-color: darkred;
 }
+/* Teclas Brancas: */
 .white-key {
     width: 68px;
     height: 280px;
@@ -97,6 +109,7 @@ body {
     background: linear-gradient(to right, #b1b0b0, #8e8d8d, #6f6e6e, #8e8d8d, #b1b0b0);
     transform: scale(1.01);
 }
+/*! Teclas Pretas */
 .black-key {
     position:absolute;
     top: 0;
@@ -287,3 +300,126 @@ body {
     opacity: 0.6;
     z-index: 1;
 }
+
+/* *********************************************************** */
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        color: yellow;
+    }
+    .keyboard-container {
+        padding: 20px 20px 16px;
+        margin: 10px;
+        max-width: 100%;
+    }
+    .container-botoes {
+        gap: 10px;
+    }
+    .botao-com-texto {
+        gap: 6px;
+    }
+    .botao-com-texto span {
+        font-size: 14px;
+        padding-left: 25px;
+    }
+    .toggle-button-teclas,
+    .toggle-button-notas {
+    position: absolute;
+    right: 8%;
+    width: 22px;
+    height: 22px;
+    }
+    .toggle-button-teclas::after,
+    .toggle-button-notas::after {
+        width: 14px;
+        height: 14px;
+    }
+    /* Primeiro Bloco: */
+    .white-key {
+        width: 58px;
+        height: 240px;
+        background-color: pink;
+    }
+    .black-key {
+        width: 28px;
+        height: 120px;
+    }
+        
+    .black-key:nth-child(1){
+        left: 46px;
+    }
+    .black-key:nth-child(2){
+        left: 104px;
+    }
+    .black-key:nth-child(3){
+        left: 218px;
+        /* 117px +(2 *68px) */
+    }
+    .black-key:nth-child(4){
+        left: 275px;
+    }
+    .black-key:nth-child(5){
+        left: 332px;
+    }
+    /* Segundo Bloco: */
+    .black-key:nth-child(6){
+        left: 450px;
+    }
+    .black-key:nth-child(7){
+        left: 508px;
+    }
+    .black-key:nth-child(8){
+        left: 625px;
+    }
+    .black-key:nth-child(9){
+        left: 682px;
+    }
+    .black-key:nth-child(10){
+        left: 740px;
+    }
+
+/*! REVER */
+    .tecla {
+        font-size: 12px;
+    }
+    .nota {
+        font-size: 12px;
+    }
+
+    /* Section de Botões: */
+    /* Fazer a proporção dos botões não consegui fazer girar para horizontal */
+
+}
+/* TESTE: */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    .keyboard-container {
+        padding: 10px 10px 6px;
+        max-width: 100%;
+    }
+    .black-key {
+        background-color: greenyellow;
+    }
+}
+
+/* @media (orientation: landscape) and (max-width: 768px) */
+/*  @media (max-height: 480px) and (orientation: landscape) */
+@media (max-width: 768px) and (max-height: 500px) {
+    body {
+        padding: 5px;
+    }
+    .keyboard-container {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        padding: 10px;
+    }
+    .black-key {
+        background-color: coral;
+    }
+}
+
+/* *********************************************************** */
