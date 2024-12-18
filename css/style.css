@@ -420,8 +420,19 @@ body {
 /* *********************************************************** */
 @media (max-width: 866px) {
     .keyboard-container {
+        position: fixed;
+        /* ou position: absolute; */
         top: 0;
-/*         padding: 10px 10px 8px; */
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding: 10px 10px 8px;
+        max-width: 668px;
+        max-height: 334px;
+        overflow: hidden;
+        /* ou overflow-y: auto; */
+        display: flex;
+        justify-content: center;    
     }
     .container-botoes {
         gap: 8px;
@@ -445,43 +456,42 @@ body {
     }
     .white-key {
         width: 48px;
-/*         height: 200px; */
-        height: 180px;
+        height: 200px;
     }
     .black-key {
         width: 24px;
     }
     /* Primeiro Bloco: */   
     .black-key:nth-child(1){
-        left: 36px;
+        left: 33px;
     }
     .black-key:nth-child(2){
-        left: 86px;
+        left: 82px;
     }
     .black-key:nth-child(3){
-        left: 180px;
+        left: 170px;
     }
     .black-key:nth-child(4){
-        left: 228px;
+        left: 216px;
     }
     .black-key:nth-child(5){
-        left: 276px;
+        left: 265px;
     }
     /* Segundo Bloco: */
     .black-key:nth-child(6){
-        left: 372px;
+        left: 355px;
     }
     .black-key:nth-child(7){
-        left: 420px;
+        left: 402px;
     }
     .black-key:nth-child(8){
-        left: 516px;
+        left: 492px;
     }
     .black-key:nth-child(9){
-        left: 565px;
+        left: 538px;
     }
     .black-key:nth-child(10){
-        left: 612px;
+        left: 585px;
     }
     .black-key .nota {
         font-size: 9px;
@@ -489,8 +499,8 @@ body {
     }
     .compact-control-panel {
         top: 0;
-/*         height: 90px; */
-        height: 75px;
+        height: 90px;
+/*         height: 75px; */
         width: 540px;
     }
     /* Caixas de som TRILHO PRETO*/
@@ -514,20 +524,6 @@ body {
 /* TESTE: 480px  => TELA MÍNIMA EM PAISAGEM 698px DE Largura:*/
 /* 698px */
 @media (max-width: 698px) {
-    .keyboard-container {
-        position: fixed;
-        /* position: absolute; */
-        top: 0;
-        left: 0;
-        right: 0;
-        /* padding: 10px 10px 8px; */
-        padding: 0px 0px 0px;
-        max-height: 334px;
-        /* Altura da janela menos 20px */
-        max-height: calc(100vh - 20px);
-        overflow: hidden;
-        /* overflow-y: auto; */
-    }
     .black-key {
         background-color: pink;
     }
