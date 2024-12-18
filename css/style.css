@@ -21,13 +21,13 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px;
+    padding: 25px;
     width: 100%;
     height: 100%;
     background-color: #000;
     color: #b1b0b0;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     z-index: 9999;
 }
 .keyboard-container {
@@ -50,7 +50,7 @@ body {
 }
 .botao-com-texto span {
     font-size: 16px;
-    padding-left: 30px;
+    padding-left: 35px;
     color: #888;
 }
 .toggle-button-teclas,
@@ -345,8 +345,10 @@ body {
         height: 240px;
     }
     .black-key {
-        width: 28px;
+        width: 32px;
         height: 120px;
+/*         Teste Visual */
+        background-color: coral;
     }
     /* Primeiro Bloco: */   
     .black-key:nth-child(1){
@@ -427,7 +429,7 @@ body {
         right: 0;
         margin: 0 auto;
         padding: 10px 10px 8px;
-        max-width: 668px;
+        max-width: 836px;
         max-height: 334px;
         overflow: hidden;
         /* ou overflow-y: auto; */
@@ -455,11 +457,86 @@ body {
         height: 12px;
     }
     .white-key {
+        width: 58px;
+        height: 200px;
+    }
+    .black-key {
+        width: 32px;
+/*         Teste Visual */
+        background-color: green;
+    }
+    /* Primeiro Bloco: */   
+    .black-key:nth-child(1){
+        left: 40px;
+    }
+    .black-key:nth-child(2){
+        left: 98px;
+    }
+    .black-key:nth-child(3){
+        left: 215px;
+    }
+    .black-key:nth-child(4){
+        left: 274px;
+    }
+    .black-key:nth-child(5){
+        left: 330px;
+    }
+    /* Segundo Bloco: */
+    .black-key:nth-child(6){
+        left: 445px;
+    }
+    .black-key:nth-child(7){
+        left: 502px;
+    }
+    .black-key:nth-child(8){
+        left: 618px;
+    }
+    .black-key:nth-child(9){
+        left: 675px;
+    }
+    .black-key:nth-child(10){
+        left: 735px;
+    }
+    .black-key .nota {
+        font-size: 9px;
+        margin-bottom: 3px;
+    }
+    .compact-control-panel {
+        top: 0;
+        height: 90px;
+/*         height: 75px; */
+        width: 540px;
+    }
+    /* Caixas de som TRILHO PRETO*/
+    .button-square {
+        width: 25px;
+        height: 25px;
+        font-size: 10px;
+    }
+    .button-round {
+        width: 35px;
+        height: 35px;
+    }
+    /* Tela de Som Vasada: */
+    .speaker-vasada {
+        width: 190px;
+        height: 65px;
+    }
+}
+/* *********************************************************** */
+@media (max-width: 836px) {
+    .keyboard-container {
+        max-width: 668px;
+    }
+    .white-key {
         width: 48px;
         height: 200px;
     }
     .black-key {
-        width: 24px;
+        /* Conferir pois aumentei a largura */
+        width: 28px;
+        /* Teste Visual */
+        background-color: pink;
     }
     /* Primeiro Bloco: */   
     .black-key:nth-child(1){
@@ -493,65 +570,17 @@ body {
     .black-key:nth-child(10){
         left: 585px;
     }
-    .black-key .nota {
-        font-size: 9px;
-        margin-bottom: 3px;
-    }
-    .compact-control-panel {
-        top: 0;
-        height: 90px;
-/*         height: 75px; */
-        width: 540px;
-    }
-    /* Caixas de som TRILHO PRETO*/
-    .button-square {
-        width: 25px;
-        height: 25px;
-        font-size: 10px;
-    }
-    .button-round {
-        width: 35px;
-        height: 35px;
-    }
-    /* Tela de Som Vasada: */
-    .speaker-vasada {
-        width: 190px;
-        height: 65px;
-    }
 }
-
 /* *********************************************************** */
-/* TESTE: 480px  => TELA MÍNIMA EM PAISAGEM 698px DE Largura:*/
+/* TESTE: => TELA MÍNIMA EM PAISAGEM 698px DE Largura:*/
 /* 698px */
 @media (max-width: 698px) {
     .black-key {
-        background-color: pink;
+        background-color: yellow;
     }
 }
 
 
-
-
 /* *********************************************************** */
 
-/*! REVER UMA SOLUÇÃO PARA OPERAR EM LANDSCAPE (TELA HORIZONTAL) */
-/* @media (orientation: landscape) and (max-width: 768px) */
-/*  @media (max-height: 480px) and (orientation: landscape) */
 
-
-/* 
-@media (max-width: 768px) and (max-height: 500px) {
-    body {
-        padding: 5px;
-    }
-    .keyboard-container {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        padding: 10px;
-    }
-    .black-key {
-        background-color: coral;
-    }
-} */
-/* *********************************************************** */
