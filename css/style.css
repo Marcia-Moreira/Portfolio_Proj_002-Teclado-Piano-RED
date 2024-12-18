@@ -514,8 +514,21 @@ body {
 /* TESTE: 480px  => TELA MÍNIMA EM PAISAGEM 698px DE Largura:*/
 /* 698px */
 @media (max-width: 698px) {
+    .keyboard-container {
+        position: fixed;
+        /* position: absolute; */
+        top: 0;
+        left: 0;
+        right: 0;
+        /* padding: 10px 10px 8px; */
+        max-height: 334px;
+        /* Altura da janela menos 20px */
+        max-height: calc(100vh - 20px);
+        overflow: hidden;
+        /* overflow-y: auto; */
+    }
     .black-key {
-        background-color: greenyellow;
+        background-color: pink;
     }
 }
 
