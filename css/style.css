@@ -421,7 +421,7 @@ body {
 @media (max-width: 866px) {
     .keyboard-container {
         top: 0;
-        padding: 10px 10px 8px;
+/*         padding: 10px 10px 8px; */
     }
     .container-botoes {
         gap: 8px;
@@ -521,6 +521,7 @@ body {
         left: 0;
         right: 0;
         /* padding: 10px 10px 8px; */
+        padding: 0px 0px 0px;
         max-height: 334px;
         /* Altura da janela menos 20px */
         max-height: calc(100vh - 20px);
