@@ -346,7 +346,7 @@ body {
     }
     .black-key {
         height: 120px;
-        background-color: coral;
+/*         background-color: coral; */
     }
     .white-key .tecla, .white-key .nota, .black-key .tecla, .black-key .nota {
         font-size: 12px;
@@ -417,9 +417,9 @@ body {
     .white-key {
         height: 200px;
     }
-    .black-key {
+/*     .black-key {
         background-color: green;
-    }
+    } */
     .black-key .nota {
         font-size: 11px;
         margin-bottom: 3px;
@@ -452,18 +452,18 @@ body {
         max-width: 839px;
         max-height: 334px;
     }
-    .black-key {
+/*     .black-key {
         background-color: orange;
-    }
+    } */
 }
 /* *********************************************************** */
 @media (max-width: 750px) {
     .keyboard-container {
         max-width: 668px;
     }
-    .black-key {
+/*     .black-key {
         background-color: pink;
-    }
+    } */
     .black-key {
         width: 28px;
     }
@@ -476,7 +476,7 @@ body {
 @media (max-width: 697px) {
     .black-key {
         /* Não é para aparecer: */
-        background-color: yellow;
+/*         background-color: yellow; */
     }
 }
 /* *********************************************************** */
