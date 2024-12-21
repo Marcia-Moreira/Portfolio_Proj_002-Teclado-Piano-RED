@@ -1,4 +1,4 @@
-/** Teclado de Piano Programado: RED */
+/*? Teclado de Piano Programado: RED */
 * {
     margin: 0;
     padding: 0;
@@ -85,7 +85,7 @@ body {
 .toggle-button-teclas:hover, .toggle-button-notas:hover {
     filter: brightness(0.8);
 }
-/** Classe que Esconde as Letras: */
+/*? Classe que Esconde as Letras: */
 .hide-text-teclas, .hide-text-notas {
     opacity: 0;
 }
@@ -94,12 +94,12 @@ body {
     cursor: pointer;
     border-top: 5px solid #000;
 }
-/** Caixa de Teclas: */
+/*? Caixa de Teclas: */
 .white-keys {
     display: flex;
     background-color: darkred;
 }
-/** Teclas Brancas: */
+/*? Teclas Brancas: */
 .white-key {
     width: 68px;
     height: 280px;
@@ -116,7 +116,7 @@ body {
     background: linear-gradient(to right, #b1b0b0, #8e8d8d, #6f6e6e, #8e8d8d, #b1b0b0);
     transform: scale(1.01);
 }
-/** Teclas Pretas: */
+/*? Teclas Pretas: */
 .black-key {
     position:absolute;
     top: 0;
@@ -135,38 +135,39 @@ body {
     background: linear-gradient(to right, #6f6e6e, #6f6e6e, #3f3e3e, #6f6e6e, #6f6e6e );
     transform: scale(1.01);
 }
+/*? Primeiro Bloco: */   
 .black-key:nth-child(1){
-    left: 49px;
+    left: 5%;
 }
 .black-key:nth-child(2){
-    left: 117px;
+    left: 12%;
 }
 .black-key:nth-child(3){
-    left: 253px;
-    /* 117px +(2 *68px) */
+    left: 26.5%;
 }
 .black-key:nth-child(4){
-    left: 321px;
+    left: 33.5%;
 }
 .black-key:nth-child(5){
-    left: 389px;
+    left: 41%;
 }
+/*? Segundo Bloco: */
 .black-key:nth-child(6){
-    left: 525px;
+    left: 55%;
 }
 .black-key:nth-child(7){
-    left: 593px;
+    left: 62.2%;
 }
 .black-key:nth-child(8){
-    left: 729px;
+    left: 76.5%;
 }
 .black-key:nth-child(9){
-    left: 797px;
+    left: 83.5%;
 }
 .black-key:nth-child(10){
-    left: 865px;
+    left: 90.8%;
 }
-/** ETIQUETAS nas Teclas: */
+/*? Etiquetas nas Teclas: */
 .white-key .tecla {
     color: #6f6e6e;
     background-color: transparent;
@@ -198,7 +199,7 @@ body {
     font-size: 14px;
     margin-bottom: 5px;
 }
-/** Quadro de Botões: */
+/*? Quadro de Botões: */
 .compact-control-panel {
     position: relative;
     display: flex;
@@ -213,7 +214,7 @@ body {
     border: 2px solid #2a2a2a;
     box-shadow: 0 0 5px 2px;
 }
-/** Botões de som TRILHO PRETO*/
+/*? Botões de som TRILHO PRETO*/
 .speaker {
     width: 22px;
     height: 100px;
@@ -237,9 +238,9 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 12px;
-    color: white;
+    color: black;
     cursor: pointer; 
-    border: 1px solid #2a2a2a;
+    border: 1px solid #474747;
     box-shadow: 0 0 4px 1px;
     position: absolute;
 }
@@ -254,7 +255,6 @@ body {
 /** Botões de controle */
 .control-buttons {
     display: flex;
-    /* gap: 30px; */
 }
 .button-round {
     width: 60px;
@@ -310,7 +310,7 @@ body {
 }
 
 /* *********************************************************** */
-/** EXECUÇÃO EM LANDSCAPE - MODO PAISAGEM: */
+/** RESPONSIVIDADE DE TELAS: */
 /* *********************************************************** */
 @media (max-width: 1021px) {
     .keyboard-container {
@@ -345,43 +345,8 @@ body {
         height: 240px;
     }
     .black-key {
-        width: 32px;
         height: 120px;
-/*         Teste Visual */
         background-color: coral;
-    }
-    /* Primeiro Bloco: */   
-    .black-key:nth-child(1){
-        left: 46px;
-    }
-    .black-key:nth-child(2){
-        left: 104px;
-    }
-    .black-key:nth-child(3){
-        left: 218px;
-        /* 117px +(2 *68px) */
-    }
-    .black-key:nth-child(4){
-        left: 275px;
-    }
-    .black-key:nth-child(5){
-        left: 332px;
-    }
-    /* Segundo Bloco: */
-    .black-key:nth-child(6){
-        left: 450px;
-    }
-    .black-key:nth-child(7){
-        left: 508px;
-    }
-    .black-key:nth-child(8){
-        left: 625px;
-    }
-    .black-key:nth-child(9){
-        left: 682px;
-    }
-    .black-key:nth-child(10){
-        left: 740px;
     }
     .white-key .tecla, .white-key .nota, .black-key .tecla, .black-key .nota {
         font-size: 12px;
@@ -391,7 +356,7 @@ body {
         height: 120px;
         width: 650px;
     }
-    /* Caixas de som TRILHO PRETO*/
+    /*? Caixas de som TRILHO PRETO: */
     .speaker {
         width: 18px;
         height: 70px;
@@ -401,25 +366,18 @@ body {
         height: 30px;
         font-size: 12px;
     }
-    .button-square.left {
-        left: 4%;
-        top: 45%;
-    }
-    .button-square.right {
-        left: 15%;
-        top: 32%;
-    }
     .button-round {
         width: 40px;
         height: 40px;
     }
-    /* Tela de Som Vasada: */
+    /*? Tela de Som Vasada: */
     .speaker-vasada {
         width: 200px;
         height: 70px;
     }
 }
 /* *********************************************************** */
+/* ? INTERVALO DE LARGURA: 866px a 839px */
 @media (max-width: 866px) {
     .keyboard-container {
         position: fixed;
@@ -429,12 +387,12 @@ body {
         right: 0;
         margin: 0 auto;
         padding: 10px 10px 8px;
-        max-width: 836px;
+        max-width: 839px;
         max-height: 334px;
         overflow: hidden;
         /* ou overflow-y: auto; */
         display: flex;
-        justify-content: center;    
+        justify-content: center;
     }
     .container-botoes {
         gap: 8px;
@@ -457,59 +415,23 @@ body {
         height: 12px;
     }
     .white-key {
-        width: 58px;
         height: 200px;
     }
     .black-key {
-        width: 32px;
-/*         Teste Visual */
         background-color: green;
     }
-    /* Primeiro Bloco: */   
-    .black-key:nth-child(1){
-        left: 40px;
-    }
-    .black-key:nth-child(2){
-        left: 98px;
-    }
-    .black-key:nth-child(3){
-        left: 215px;
-    }
-    .black-key:nth-child(4){
-        left: 274px;
-    }
-    .black-key:nth-child(5){
-        left: 330px;
-    }
-    /* Segundo Bloco: */
-    .black-key:nth-child(6){
-        left: 445px;
-    }
-    .black-key:nth-child(7){
-        left: 502px;
-    }
-    .black-key:nth-child(8){
-        left: 618px;
-    }
-    .black-key:nth-child(9){
-        left: 675px;
-    }
-    .black-key:nth-child(10){
-        left: 735px;
-    }
     .black-key .nota {
-        font-size: 9px;
+        font-size: 11px;
         margin-bottom: 3px;
     }
     .compact-control-panel {
         top: 0;
         height: 90px;
-/*         height: 75px; */
         width: 540px;
     }
-    /* Caixas de som TRILHO PRETO*/
+    /*! PAREI AQUI LIMPAR PARTE REPETIDA */
+    /*? Caixas de som TRILHO PRETO: */
     .button-square {
-        width: 25px;
         height: 25px;
         font-size: 10px;
     }
@@ -524,63 +446,37 @@ body {
     }
 }
 /* *********************************************************** */
-@media (max-width: 836px) {
+/* ? INTERVALO DE LARGURA: 838px a 699px */
+@media (max-width: 838px) {
+    .keyboard-container {
+        max-width: 839px;
+        max-height: 334px;
+    }
+    .black-key {
+        background-color: orange;
+    }
+}
+/* *********************************************************** */
+@media (max-width: 750px) {
     .keyboard-container {
         max-width: 668px;
     }
-    .white-key {
-        width: 48px;
-        height: 200px;
-    }
     .black-key {
-        /* Conferir pois aumentei a largura */
-        width: 28px;
-        /* Teste Visual */
         background-color: pink;
     }
-    /* Primeiro Bloco: */   
-    .black-key:nth-child(1){
-        left: 33px;
-    }
-    .black-key:nth-child(2){
-        left: 82px;
-    }
-    .black-key:nth-child(3){
-        left: 170px;
-    }
-    .black-key:nth-child(4){
-        left: 216px;
-    }
-    .black-key:nth-child(5){
-        left: 265px;
-    }
-    /* Segundo Bloco: */
-    .black-key:nth-child(6){
-        left: 355px;
-    }
-    .black-key:nth-child(7){
-        left: 402px;
-    }
-    .black-key:nth-child(8){
-        left: 492px;
-    }
-    .black-key:nth-child(9){
-        left: 538px;
-    }
-    .black-key:nth-child(10){
-        left: 585px;
+    .black-key {
+        width: 28px;
     }
 }
 /* *********************************************************** */
-/* TESTE: => TELA MÍNIMA EM PAISAGEM 698px DE Largura:*/
+/** LIMITE EXECUÇÃO EM LANDSCAPE - MODO PAISAGEM: */
+/* *********************************************************** */
+/* TESTE: 480px  => TELA MÍNIMA EM PAISAGEM 698px DE Largura:*/
 /* 698px */
-@media (max-width: 698px) {
+@media (max-width: 697px) {
     .black-key {
+        /* Não é para aparecer: */
         background-color: yellow;
     }
 }
-
-
 /* *********************************************************** */
-
-
