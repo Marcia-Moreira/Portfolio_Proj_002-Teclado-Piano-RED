@@ -15,6 +15,7 @@ Este repositório faz parte de uma série de projetos que demonstram minhas habi
 </div>
 
 ## Link do Projeto Finalizado:
+* clique com o botão direito e escolha "Abrir em nova aba"  
 ☑️ Projeto finalizado / Deploy no GitHub Pages: https://marcia-moreira.github.io/Portfolio_Proj_002-Teclado-Piano-RED/
 
 ## Nome do Projeto: SIMULADOR TECLADO PIANO - RED
@@ -89,7 +90,8 @@ Ferramentas de apoio:
 - [    ] Existe alguma forma de realmente aprimorar o codigo do volume e ele aumentar ou diminuir o volume?
 - [    ] As caixas Legendas de Notas e de Teclas, estão impedindo o toque Touch que emite o som! Mesmo desativadas, parece que não deixa tocar pois estão ali efetivamente e apenas transparente.
 - [    ] A parte de Botoes de Legendas das Teclas para que se mostrem ou se escondam, se cliccarmos na palavra também está ativando e desativando, não deveria acontecer, deveria funcionar apenas no botão!
-- [    ] 🤳Verificar Responsividade em Celulares e Tablets.
+- [ OK ] 🤳Verificar Responsividade em Celulares Maiores e Tablets.
+- [    ] Verificar responsividade em celulares iphone de telas menores e mais antigos (Teste Udson-Senac)
 
 ## Registros da Construção 🧱:
 - Desenvolvimento Web => *Marcia Moreira*
