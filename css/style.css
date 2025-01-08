@@ -422,7 +422,7 @@ body {
 }
 /* *********************************************************** */
 /* ? INTERVALO DE LARGURA: 866px a 839px */
-@media (max-width: 866px) {
+@media (max-width: 839px) {
     .keyboard-container {
         position: fixed;
         /* ou position: absolute; */
@@ -463,9 +463,9 @@ body {
     .white-key {
         height: 200px;
     }
-/*     .black-key {
-        background-color: green;
-    } */
+    .black-key {
+        width: 30px;
+    }
     .black-key .nota, .black-key .cifra  {
         font-size: 11px;
         margin-bottom: 3px;
@@ -488,6 +488,12 @@ body {
     .speaker-vasada {
         width: 190px;
         height: 65px;
+    }
+}
+/* *********************************************************** */
+@media (max-width: 750px) {
+    .black-key {
+        width: 28px;
     }
 }
 /* *********************************************************** */
