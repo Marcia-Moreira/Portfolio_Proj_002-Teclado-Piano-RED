@@ -97,7 +97,7 @@ Ferramentas de apoio:
 - Desenvolvimento Web => *Marcia Moreira*
 - Iniciado => 04/11/2024
 - Finalizado Primeiro Deploy => 08/11/2024
-- Atualização do Projeto => N/A
+- Atualização do Projeto => 08/01/2025
 - WhatsApp => *+55 11 97721-9430*
 <div style="display: inline_block">
     <!-- WhatsApp -->
