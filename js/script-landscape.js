@@ -1,8 +1,10 @@
-// Código para forçar virar a tela para paisagem / landscape:
+//! Código para forçar virar a tela para paisagem / landscape:
 
 function enforceLandscape() {
     // Largura mínima permitida: 698
-    const minWidth = 698;
+    // const minWidth = 698;
+    // Largura mínima permitida modo paisagem: iphone SE 667 x 375 px => 636px
+    const minWidth = 636;
     const body = document.querySelector("body");
     const message = document.getElementById("landscape-warning");
     const content = document.querySelector(".keyboard-container");
