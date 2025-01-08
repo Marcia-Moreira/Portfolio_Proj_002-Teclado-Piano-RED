@@ -1,4 +1,4 @@
-// Painel do Teclado:
+//! Painel do Teclado:
 
 document.addEventListener("DOMContentLoaded", function() {
     const volumeControl = document.getElementById("volume-control");
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     function ajustarVolume(vol) {
-        // Configuração do volume do teclado virtual (substitua para ajustar o áudio conforme necessário)
+        // Configuração do volume do teclado virtual
         console.log(`Volume ajustado para: ${Math.round(vol * 100)}%`);
     }
 });
