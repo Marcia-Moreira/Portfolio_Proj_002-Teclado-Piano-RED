@@ -54,7 +54,8 @@ body {
     color: #888;
 }
 .toggle-button-teclas,
-.toggle-button-notas {
+.toggle-button-notas,
+.toggle-button-cifras {
     position: absolute;
     right: 10%;
     width: 24px;
@@ -65,13 +66,17 @@ body {
     transition: filter 0.2s;
 }
 .toggle-button-teclas {
-    top: 15%;
+    top: 8%;
 }
 .toggle-button-notas {
-    top: 25%;
+    top: 16%;
+}
+.toggle-button-cifras {
+    top: 24%;
 }
 .toggle-button-teclas::after,
-.toggle-button-notas::after {
+.toggle-button-notas::after,
+.toggle-button-cifras::after {
     content: "";
     width: 16px;
     height: 16px;
@@ -82,22 +87,24 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.toggle-button-teclas:hover, .toggle-button-notas:hover {
+.toggle-button-teclas:hover, .toggle-button-notas:hover, .toggle-button-cifras:hover {
     filter: brightness(0.8);
 }
 /*? Classe que Esconde as Letras: */
-.hide-text-teclas, .hide-text-notas {
+.hide-text-teclas, .hide-text-notas, .hide-text-cifras {
     opacity: 0;
 }
 .keys {
     position: relative;
     cursor: pointer;
     border-top: 5px solid #000;
+    justify-content: space-between;
 }
 /*? Caixa de Teclas: */
 .white-keys {
     display: flex;
-    background-color: darkred;
+    /* background-color: darkred; */
+    background-color: rgb(80, 2, 2);
 }
 /*? Teclas Brancas: */
 .white-key {
@@ -108,13 +115,16 @@ body {
     border-radius: 0 0 5px 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: flex-start;
     align-items: center;
+    position: relative;
 }
 .white-key:hover,
 .white-key.clicked {
     background: linear-gradient(to right, #b1b0b0, #8e8d8d, #6f6e6e, #8e8d8d, #b1b0b0);
     transform: scale(1.01);
+    transition: 0.5s;
 }
 /*? Teclas Pretas: */
 .black-key {
@@ -127,13 +137,15 @@ body {
     border-radius: 0 0 5px 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: flex-start;
     align-items: center;
 }
 .black-key:hover,
 .black-key.clicked {
     background: linear-gradient(to right, #6f6e6e, #6f6e6e, #3f3e3e, #6f6e6e, #6f6e6e );
     transform: scale(1.01);
+    transition: 0.5s;
 }
 /*? Primeiro Bloco: */   
 .black-key:nth-child(1){
@@ -168,36 +180,67 @@ body {
     left: 90.8%;
 }
 /*? Etiquetas nas Teclas: */
+/* .tecla = para cada tecla do computador */
 .white-key .tecla {
+    position: absolute;
+    top: 5px;
     color: #6f6e6e;
     background-color: transparent;
     font-size: 20px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 .white-key .tecla:hover {
     color: #fff;
+    transition: 0.5s;
 }
-.white-key .nota {
-    color: #000;
+.white-key .nota, .white-key .cifra {
     background-color: transparent;
     font-size: 16px;
-    margin-bottom: 5px;
+}
+.white-key .nota {
+    position: absolute;
+    bottom: 15px;
+    /* color: #504d4d; */
+    color: gray;
+}
+.white-key .nota:hover {
+    color: #fff;
+    transition: 0.5s;
+}
+.white-key .cifra {
+    position: absolute;
+    bottom: 2px;
+    color: #000;
+    font-weight: 600;
 }
 .black-key .tecla {
+    position: absolute;
+    top: 5px;
     color: #6f6e6e;
     background-color: transparent;
     font-size: 20px;
-    padding-bottom: 8px;
-    margin-top: 5px;
 }
 .black-key .tecla:hover {
     color: #fff;
+    transition: 0.5s;
 }
-.black-key .nota {
+.black-key .nota, .black-key .cifra {
     color: #fff;
     background-color: transparent;
     font-size: 14px;
-    margin-bottom: 5px;
+}
+.black-key .nota {
+    position: absolute;
+    bottom: 15px;
+    color: gray;
+}
+.black-key .nota:hover {
+    color: #fff;
+    transition: 0.5s;
+}
+.black-key .cifra {
+    position: absolute;
+    bottom: 2px;
 }
 /*? Quadro de Botões: */
 .compact-control-panel {
@@ -308,9 +351,8 @@ body {
     opacity: 0.6;
     z-index: 1;
 }
-
 /* *********************************************************** */
-/** RESPONSIVIDADE DE TELAS: */
+/** RESPONSIVIDADE DE TELAS e TECLAS: */
 /* *********************************************************** */
 @media (max-width: 1021px) {
     .keyboard-container {
@@ -327,13 +369,15 @@ body {
         padding-left: 25px;
     }
     .toggle-button-teclas,
-    .toggle-button-notas {
+    .toggle-button-notas,
+    .toggle-button-cifras {
     right: 8%;
     width: 22px;
     height: 22px;
     }
     .toggle-button-teclas::after,
-    .toggle-button-notas::after {
+    .toggle-button-notas::after,
+    .toggle-button-cifras::after {
         width: 14px;
         height: 14px;
     }
@@ -348,7 +392,7 @@ body {
         height: 120px;
 /*         background-color: coral; */
     }
-    .white-key .tecla, .white-key .nota, .black-key .tecla, .black-key .nota {
+    .white-key .tecla, .white-key .nota, .white-key .cifra, .black-key .tecla, .black-key .nota, .black-key .cifra {
         font-size: 12px;
         margin-top: 3px;
     }
@@ -387,7 +431,7 @@ body {
         right: 0;
         margin: 0 auto;
         padding: 10px 10px 8px;
-        max-width: 839px;
+        /* max-width: 866px; */
         max-height: 334px;
         overflow: hidden;
         /* ou overflow-y: auto; */
@@ -405,12 +449,14 @@ body {
         padding-left: 20px;
     }
     .toggle-button-teclas,
-    .toggle-button-notas {
+    .toggle-button-notas,
+    .toggle-button-cifras {
     width: 20px;
     height: 20px;
     }
     .toggle-button-teclas::after,
-    .toggle-button-notas::after {
+    .toggle-button-notas::after,
+    .toggle-button-cifras::after {
         width: 12px;
         height: 12px;
     }
@@ -420,7 +466,7 @@ body {
 /*     .black-key {
         background-color: green;
     } */
-    .black-key .nota {
+    .black-key .nota, .black-key .cifra  {
         font-size: 11px;
         margin-bottom: 3px;
     }
@@ -429,7 +475,6 @@ body {
         height: 90px;
         width: 540px;
     }
-    /*! PAREI AQUI LIMPAR PARTE REPETIDA */
     /*? Caixas de som TRILHO PRETO: */
     .button-square {
         height: 25px;
@@ -446,37 +491,5 @@ body {
     }
 }
 /* *********************************************************** */
-/* ? INTERVALO DE LARGURA: 838px a 699px */
-@media (max-width: 838px) {
-    .keyboard-container {
-        max-width: 839px;
-        max-height: 334px;
-    }
-/*     .black-key {
-        background-color: orange;
-    } */
-}
-/* *********************************************************** */
-@media (max-width: 750px) {
-    .keyboard-container {
-        max-width: 668px;
-    }
-/*     .black-key {
-        background-color: pink;
-    } */
-    .black-key {
-        width: 28px;
-    }
-}
-/* *********************************************************** */
-/** LIMITE EXECUÇÃO EM LANDSCAPE - MODO PAISAGEM: */
-/* *********************************************************** */
-/* TESTE: 480px  => TELA MÍNIMA EM PAISAGEM 698px DE Largura:*/
-/* 698px */
-@media (max-width: 697px) {
-    .black-key {
-        /* Não é para aparecer: */
-/*         background-color: yellow; */
-    }
-}
+/** LIMITE EXECUÇÃO EM LANDSCAPE - MODO PAISAGEM: 636px de teste no Iphone 7 Pequeno */
 /* *********************************************************** */
