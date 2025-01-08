@@ -1,4 +1,4 @@
-// Teclado de Piano Programado:
+//! Teclado de Piano Programado:
 // console.log("Testes do Teclado!")
 
 // CODIGO PARA CAPTURAR CLICKS E TOUCHSCREEN:
