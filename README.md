@@ -104,7 +104,7 @@ Ferramentas de apoio:
     <!-- WhatsApp -->
     <a href="https://wa.me/5511977219430" alt="Meu_WhatsApp" target="_blank"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" target="_blank"></a> &nbsp;
     <!-- Linkedin -->
-    <a href="https://www.linkedin.com/in/marciamoreiramm/" target="_blank"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> &nbsp;
+    <a href="https://www.linkedin.com/in/idmarciamoreira/" target="_blank"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> &nbsp;
 </div>
 
 ##
