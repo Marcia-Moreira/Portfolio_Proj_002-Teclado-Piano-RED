@@ -28,8 +28,9 @@ Projeto desenvolvido devido a necessidade de treinamento para aprimorar os estud
 
 - Aparência mais fidedigna à um teclado físico, com simulação de caixa de saída de som, botões de volume, tone e echo.
 - Implementar seletor para mostrar as Notas Musicais em todas as teclas com opção de ocultar.
-- Coloração  das teclas comdegradê.
+- Coloração  das teclas com degradê.
 - Responsividade para telas de celulares e tablets.
+- Implementação de etiquetas e botão para cifras.
 
 ## Tecnologias Utilizadas:
 <!-- https://devicon.dev/ -->
@@ -55,7 +56,7 @@ Projeto desenvolvido devido a necessidade de treinamento para aprimorar os estud
     &nbsp;&nbsp;&nbsp;
 </div>
 
-- **HTML5:** Estruturação do conteúdo e marcação semântica do das teclas e suas notas musicais.
+- **HTML5:** Estruturação do conteúdo e marcação semântica das teclas e suas notas musicais.
 
 - **CSS3:** Estilização visual com:
   - Animações para os botões interativos.
@@ -91,7 +92,7 @@ Ferramentas de apoio:
 - [    ] As caixas Legendas de Notas e de Teclas, estão impedindo o toque Touch que emite o som! Mesmo desativadas, parece que não deixa tocar pois estão ali efetivamente e apenas transparente.
 - [    ] A parte de Botoes de Legendas das Teclas para que se mostrem ou se escondam, se cliccarmos na palavra também está ativando e desativando, não deveria acontecer, deveria funcionar apenas no botão!
 - [ OK ] 🤳Verificar Responsividade em Celulares Maiores e Tablets.
-- [    ] Verificar responsividade em celulares iphone de telas menores e mais antigos (Teste Udson-Senac)
+- [ OK ] Verificar responsividade em celulares iphone de telas menores e mais antigos (Teste Hudson-Senac)
 
 ## Registros da Construção 🧱:
 - Desenvolvimento Web => *Marcia Moreira*
