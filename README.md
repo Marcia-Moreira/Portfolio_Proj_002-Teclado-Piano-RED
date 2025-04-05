@@ -89,8 +89,8 @@ Ferramentas de apoio:
 - [ OK ] Aprimorar a coloração e descolcoração ao clicar e soltar as teclas touch.
 - [    ] Os botões redondos de volume, estão identificados com a mesma ID, logo o código JS está dando erro e precisa ser ajustado para classe!
 - [    ] Existe alguma forma de realmente aprimorar o codigo do volume e ele aumentar ou diminuir o volume?
-- [    ] As caixas Legendas de Notas e de Teclas, estão impedindo o toque Touch que emite o som! Mesmo desativadas, parece que não deixa tocar pois estão ali efetivamente e apenas transparente.
-- [    ] A parte de Botoes de Legendas das Teclas para que se mostrem ou se escondam, se cliccarmos na palavra também está ativando e desativando, não deveria acontecer, deveria funcionar apenas no botão!
+- [ OK ] As caixas Legendas de Notas e de Teclas, estão impedindo o toque Touch que emite o som! Mesmo desativadas, parece que não deixa tocar pois estão ali efetivamente e apenas transparente. Resolvido com a propriedade css "pointer-events: none;" e mudanças no hover.
+- [    ] A parte de Botoes de Legendas das Teclas para que se mostrem ou se escondam, se clicarmos na palavra também está ativando e desativando, não deveria acontecer, deveria funcionar apenas no botão!
 - [ OK ] 🤳Verificar Responsividade em Celulares Maiores e Tablets.
 - [ OK ] Verificar responsividade em celulares iphone de telas menores e mais antigos (Teste Hudson-Senac)
 

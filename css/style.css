@@ -10,7 +10,7 @@ body {
     justify-content: center;
     height: 100vh;
     background-color: #6f6e6e;
-    /* Evitar toques desnecessários no Touch: por exemplo dois dedos=tela preta*/
+    /** Evitar toques desnecessários no Touch: por exemplo dois dedos=tela preta*/
     touch-action: none;
 }
 /** Mensagem de aviso: */
@@ -64,6 +64,7 @@ body {
     border-radius: 50%;
     cursor: pointer;
     transition: filter 0.2s;
+    /* pointer-events: none; */
 }
 .toggle-button-teclas {
     top: 8%;
@@ -189,13 +190,15 @@ body {
     font-size: 20px;
     /* margin-top: 5px; */
 }
-.white-key .tecla:hover {
+.white-key:hover .tecla {
     color: #fff;
     transition: 0.5s;
 }
 .white-key .nota, .white-key .cifra {
     background-color: transparent;
     font-size: 16px;
+    /** Para a Nota e a Cifra não interferirem no toque: */
+    pointer-events: none;
 }
 .white-key .nota {
     position: absolute;
@@ -203,7 +206,7 @@ body {
     /* color: #504d4d; */
     color: gray;
 }
-.white-key .nota:hover {
+.white-key:hover .nota {
     color: #fff;
     transition: 0.5s;
 }
@@ -220,7 +223,7 @@ body {
     background-color: transparent;
     font-size: 20px;
 }
-.black-key .tecla:hover {
+.black-key:hover .tecla {
     color: #fff;
     transition: 0.5s;
 }
@@ -228,13 +231,15 @@ body {
     color: #fff;
     background-color: transparent;
     font-size: 14px;
+    /** Para a Nota e a Cifra não interferirem no toque: */
+    pointer-events: none;
 }
 .black-key .nota {
     position: absolute;
     bottom: 15px;
     color: gray;
 }
-.black-key .nota:hover {
+.black-key:hover .nota {
     color: #fff;
     transition: 0.5s;
 }
